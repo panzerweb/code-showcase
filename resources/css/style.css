@@ -1,0 +1,18 @@
+/* Main style for the Web Application */
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+:root{
+    --background: #D0DDD0;
+    --primary: #727D73;
+    --secondary: #F0F0D7;
+    --accent: #AAB99A;
+}
+
+.navbar{
+    background: var(--primary);
+}
+
+body{
+    background: var(--background);
+}
+
