@@ -10,6 +10,16 @@ export function incrementByOne(){
 
 export function decrementByOne(){
     count = count;
-    count -= 1;
+    
+    if (count <= 0) {
+        alert("Can't go below 0!");
+    }else{
+        count -= 1;
+    }
+    countResult.innerHTML = count;
+}
+
+export function clearNumber(){
+    count = 0;
     countResult.innerHTML = count;
 }

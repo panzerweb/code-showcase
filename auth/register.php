@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         if ($result->num_rows > 0) {
             $_SESSION["error"] = ["User already exists."];
-            header("location: ../views/register_form.php");
+            header("location: ../views/auth/register_form.php");
             exit;
         }else{
             // Insert user into the database
@@ -61,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $stmt->bind_param("sssss", $username, $email, $hashedPassword, $user_type, $currentTimestamp);
 
             if ($stmt->execute()) {
-                header('Location: ../views/login_form.php');
+                header('Location: ../views/auth/login_form.php');
                 exit;
             } else {
                 echo "Error: " . $stmt->error;

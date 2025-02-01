@@ -39,7 +39,7 @@
                 ?>
                 <div class="row justify-content-center mx-5">
                     <div class="col-lg-4 shadow border border-2 p-3 rounded-3">
-                        <form action="../auth/login.php" method="post">
+                        <form action="../../auth/login.php" method="post">
                             <div class="mb-3">
                                 <label for="" class="form-label">Username</label>
                                 <input

@@ -14,6 +14,8 @@
             crossorigin="anonymous"
         ></script>
 
+
+
         <script src="../node_modules/axios/dist/axios.min.js"></script>
         <script type="module" defer src="../resources/js/app.js"></script>
     </body>

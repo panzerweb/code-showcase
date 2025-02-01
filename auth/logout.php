@@ -5,4 +5,4 @@ session_start();
 session_unset();
 session_destroy();
 
-header("Location: ../views/login_form.php");
+header("Location: ../views/auth/login_form.php");

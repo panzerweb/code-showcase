@@ -28,10 +28,11 @@
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="../resources/css/admin.css">
+        <script src="../../node_modules/axios/dist/axios.min.js"></script>
 
     </head>
 
-    <body>
+    <body onload="fetchData()">
         <header>
             <!-- place navbar here -->
             <div class="sidebar">
@@ -42,7 +43,7 @@
                     if ($_SESSION["user_type"] == "admin") {
                         echo 
                         '
-                            <a href="#"><i class="fa-solid fa-layer-group"></i> Users</a>
+                            <a href="./users.php"><i class="fa-solid fa-layer-group"></i> Users</a>
                         ';
                     }
                 ?>

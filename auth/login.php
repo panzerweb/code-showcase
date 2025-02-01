@@ -46,7 +46,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     // Display errors if any
     if (!empty($error)) {
         $_SESSION["error"] = $error;
-        header("location: ../views/login_form.php");
+        header("location: ../views/auth/login_form.php");
         exit;
     }
 
