@@ -28,12 +28,12 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./views/register_form.php">Sign Up</a>
+                            <a class="nav-link active" aria-current="page" href="./views/auth/register_form.php">Sign Up</a>
                             </li>
                         </ul>
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./views/login_form.php">Sign In</a>
+                            <a class="nav-link active" aria-current="page" href="./views/auth/login_form.php">Sign In</a>
                             </li>
                         </ul>
                     </div>
