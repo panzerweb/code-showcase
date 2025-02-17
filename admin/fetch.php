@@ -6,7 +6,7 @@ session_start();
 
 include '../config/config.php';
 
-$sql = "SELECT * FROM users";
+$sql = "SELECT * FROM users WHERE user_type = 'user'";
 $data = [];
 $stmt = $conn->prepare($sql);
 $stmt->execute();

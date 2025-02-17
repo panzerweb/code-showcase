@@ -27,7 +27,7 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="../resources/css/admin.css">
+        <link rel="stylesheet" href="../resources/css/app.css">
         <script src="../../node_modules/axios/dist/axios.min.js"></script>
 
     </head>
@@ -48,7 +48,6 @@
                     }
                 ?>
                 <a href="./project.php"><i class="fa-solid fa-splotch"></i> Projects</a>
-                <a href="#"><i class="fa-solid fa-layer-group"></i> Categories</a>
                 <a href="#"><i class="fa-solid fa-code-branch"></i> Learn Code</a>
                 <a href="../auth/logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
 

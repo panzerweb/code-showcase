@@ -1,36 +1,42 @@
 export function fetchData() {
-    let tableElement = document.querySelector("tbody");
+    let contentElement = document.querySelector(".user-content");
     let modalElement = document.getElementById("myModal");
 
     axios.get("../admin/fetch.php")
     .then(function (response) {
         const users = response.data;
 
-        tableElement.innerHTML = ""; // Clear previous table content
+        contentElement.innerHTML = ""; // Clear previous table content
 
         users.forEach(user => {
-            let row = document.createElement('tr');
+            let container = document.createElement('div');
+            container.classList.add('my-3');
 
-            row.innerHTML = 
+            container.innerHTML = 
             `
-                <td>${user.id}</td>
-                <td>${user.username}</td>
-                <td>${user.email}</td>
-                <td>${user.user_type}</td>
-                <td>
-                    <div class="d-flex justify-content-center align-items-center gap-3">
-                        <button type="button" class="btn btn-primary view-btn" 
-                        data-bs-toggle="modal" 
-                        data-id="${user.id}" data-username = "${user.username}" data-email="${user.email}" data-type="${user.user_type}"
-                        data-bs-target="#exampleModal">
-                            View
-                        </button>                        
-                        <button type="button" class="btn btn-danger btn-xs">Delete</button>
+                <div class="user-card border border-1 d-flex align-items-center justify-content-between p-3 shadow-sm rounded">
+                    <div class="user-info">
+                        <h5 class="mb-1 fw-bold">${user.username}</h5>
+                        <p class="text-muted mb-0">${user.email}</p>
+                        <span class="badge bg-secondary">${user.user_type}</span>
                     </div>
-                </td>
+                    
+                    <div class="d-flex align-items-center gap-2">
+                        <button type="button" class="btn btn-success btn-sm view-btn" 
+                            data-bs-toggle="modal" 
+                            data-id="${user.id}" data-username="${user.username}" 
+                            data-email="${user.email}" data-type="${user.user_type}"
+                            data-bs-target="#exampleModal">
+                            View
+                        </button>
+                        <button type="button" class="btn btn-danger btn-sm" onclick="deleteUser(${user.id})">
+                            Delete
+                        </button>
+                    </div>
+                </div>
             `;
 
-            tableElement.appendChild(row);
+            contentElement.appendChild(container);
         });
 
         //Iterate through each view buttons

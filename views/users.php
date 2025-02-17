@@ -4,31 +4,13 @@
         <main>
 
             <div class="content">
-                <h2>User Section</h2>
+                <h2 class="fw-bold">User Section</h2>
                 <p>Manage your registered users here. view them, delete them</p>
 
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="card-title">Registered Users</h3>
-                    </div>
-                    <!-- /.card-header -->
-                    <div class="card-body table-responsive p-0">
-                        <table class="table table-sm table-bordered">
-                            <thead>
-                                <tr>
-                                <th style="width: 2rem">#</th>
-                                <th>Username</th>
-                                <th>Email</th>
-                                <th>Role</th>
-                                <th style="width: 10rem;" class="text-center">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                            </tbody>
-                        </table>
-                    </div>
-                <!-- /.card-body -->
+                <hr>
+                
+                <div class="user-content">
+                    <!-- Rendered By JavaScript -->
                 </div>
             </div>
 
